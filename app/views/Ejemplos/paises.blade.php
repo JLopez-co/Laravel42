@@ -20,21 +20,21 @@
                     <th class="tg-qiyl" >Paises</th>
                     <th class="tg-qiyl"> Capital</th>
                     <th class="tg-qiyl">Vacaciones</th>
-                    <th class="tg-qiyl">Moneda</th> 
+                    <th class="tg-qiyl">Moneda</th>
                     <th class="tg-qiyl">Población</th>
                 </tr>
             </thead>
             <tbody>
                 @foreach ($paises as $Pais => $Clasificacion)
                 <tr>
-                    <td class="tg-yw4l">{{$Pais}}</td>  
-                    
+                    <td class="tg-yw4l">{{$Pais}}</td>
+
                     @foreach ($Clasificacion as $dato => $valor)
-                    <td class="tg-yw4l">{{$valor}} </td>  
-                    @endforeach 
+                    <td class="tg-yw4l">{{$valor}} </td>
+                    @endforeach
                 </tr>
                 @endforeach
             </tbody>
-        </table>           
+        </table>
     </body>
 </html>

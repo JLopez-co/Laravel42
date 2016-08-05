@@ -19,17 +19,17 @@
                     </tr>
                 </thead>
                 <tbody>
-                    
-                    <?php $paisUno = $ciudades[0]->pais ?>
-                    @foreach ($paises as $paisea)                    
-                        @if($paisea->pais !== $paisUno)
-                        <tr>
-                            <th> {{$ciudad->pais}}</th>
-                            <td></td>
-                          <?php $paisUno ?> 
-                        </tr>
-                        @endif
-                    @endforeach    
+                  <?php $var = 0; ?>
+                     @foreach ($paises as $paisea)
+                      <tr>
+                          <?php
+                          var_dump($paisea->pais [$var+1]);
+
+                            if($paisea->pais == $paisea->pais [$var+1] ){
+
+                            }?>
+                      </tr>
+                    @endforeach
                 </tbody>
             </table>
         </div>

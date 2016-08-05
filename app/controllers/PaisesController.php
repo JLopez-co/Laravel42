@@ -3,7 +3,7 @@
 class PaisesController extends BaseController {
 
     //Accion de ejemplo
-    
+
     public function getPaises() {
         $paises = array(
              'Ecuador'=>[
@@ -11,13 +11,13 @@ class PaisesController extends BaseController {
                  "DondeIr"=>"Isla isabel",
                  "Moneda"=>"Dolar",
                  "Poblacio"=>15.74
-             ], 
+             ],
             'Peru'=>[
                  "Capital"=>"Lima",
                  "DondeIr"=>"Chimbote",
                  "Moneda"=>"Sol",
                  "Poblacio"=>30.38
-             ], 
+             ],
             'Bolivia'=>[
                  "Capital"=>"Sucre",
                  "DondeIr"=>"Oruro",
@@ -49,21 +49,21 @@ class PaisesController extends BaseController {
                  "Poblacio"=>204
              ]
         );
- 
+
         return View::make('Ejemplos/paises', ["paises" => $paises]);
 
         }
-        
+
     public function getCiudad (){
         $result= DB::select("
-            select 
+            select
                 P.country as pais,
                 C.city as nombre
-                
-            from  
-	        country P inner join city C on P.country_id = C.country_id 
+
+            from
+	        country P inner join city C on P.country_id = C.country_id
             ORDER BY P.country  ASC;");
-        
-        return View::make('Ejemplos/ciudades',["paises" => $result]);       
+
+        return View::make('Ejemplos/ciudades',["paises" => $result]);
     }
 }
